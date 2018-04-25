@@ -1,0 +1,4 @@
+<SYNTAX> ::= <word> | <word> <SYNTAX>
+<word> ::= <little> | <big>
+<little> ::= a-z
+<big> ::= "A"

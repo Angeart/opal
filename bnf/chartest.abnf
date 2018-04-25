@@ -1,0 +1,4 @@
+SYNTAX = *word
+word = little / big
+little = "a"
+big = "A"

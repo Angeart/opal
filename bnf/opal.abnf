@@ -1,0 +1,28 @@
+SYNTAX = function
+function = skip object_name skip [pattern] skip "(" skip arguments skip ")" skip type skip scope
+scope = scope_begin sentences scope_end
+scope_begin = skip "{" skip
+scope_end = skip "}" skip
+arguments = definition_variable
+argument_sep = skip "," skip
+definition_variable = (attribute skip object_name skip type) / (object_name skip type)
+type = ":" skip object_name
+pattern = "[" skip object_name skip "]"
+attribute = object_name
+object_name = alpha *( alpha / digits )
+sentences = "test"
+
+; util
+skip = 1*( eol / spaces ) / blank
+eol = cr lf | cr | lf
+cr = "\r"
+lf = "\n"
+spaces_opt = 1*space / blank
+spaces = 1*space
+alpha = 1*( alpha_lower / alpha_up )
+alpha_lower = %x61-7A
+alpha_up = %x41-5A
+digits = 1*digit
+digit = %x30-39
+space = " "
+blank = ""

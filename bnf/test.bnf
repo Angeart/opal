@@ -1,0 +1,4 @@
+<SYNTAX> ::= <evaluation> | <evaluation> <CRLF> <SYNTAX>
+<evaluation> ::= <number> <OWSP> <type> <OWSP> <number>
+<number> ::= <DIGITS>
+<type> ::= "+" | "-" | "/" | "*"
