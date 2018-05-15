@@ -22,6 +22,7 @@
   "homepage": "https://github.com/Angeart/opal#readme",
   "dependencies": {
     "bnf": "^1.0.0",
+    "llvm-node": "^2.0.4",
     "readline-sync": "^1.4.9"
   }
 }
